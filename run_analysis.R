@@ -19,7 +19,6 @@
 #########################################################################################################################
 
 rm(list = ls(all = TRUE)) #Clear workspace
-library(data.table)
 library(dplyr)
 
 #########################################################################################################################
@@ -27,13 +26,13 @@ library(dplyr)
 #########################################################################################################################
 
 # Download the respective dataset
-#fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-#if(!file.exists("./data")){dir.create("./data")}
-#destFileName = "./data/UCI_HAR_Dataset.zip"
-#download.file(fileUrl, destfile = destFileName)
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+if(!file.exists("./data")){dir.create("./data")}
+destFileName = "./data/UCI_HAR_Dataset.zip"
+download.file(fileUrl, destfile = destFileName)
 
 # Unzip data
-#if(file.exists(destFileName)){ unzip(zipfile=destFileName, exdir="./data") }
+if(file.exists(destFileName)){ unzip(zipfile=destFileName, exdir="./data") }
 
 #########################################################################################################################
 # Step 1: Merge training and test data
