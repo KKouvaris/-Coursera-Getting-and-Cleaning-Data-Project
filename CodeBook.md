@@ -10,8 +10,50 @@ Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTA
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-## Tidy Data
-The tidy data can be found in the tidyData.txt file in this repo. The data respesent average of each variable for each activity and each subject.
+
+## Step 1. Merge training and test set into one dataset.
+
+Read the following files and store them into local variables:
+
+x_train.txt
+y_train.txt
+x_test.txt
+y_test.txt
+subject_train.txt
+subject_test.txt
+features.txt
+activity_labels.txt
+
+Subsequently, assign appropriate names to the column headers and merges the data into one dataset as appropriate.
+
+## Step 2. Select the mean and standard deviation values for each measurement.
+
+Select only the features that corresponds to the mean and standard deviation of the respective variables. Identify those whose labels include "mean" or "std" and extract them.
+
+## Step 3. Use descriptive names for the activities in the dataset.
+
+Use descriptive names for the activities according to their activity code. The respective dictionary can be found in activity_labels.txt. Factorise activity variable according to the respective label system.
+
+### Activity Labels
+
+| Activity Code  | Acitivity Label | Description |
+| ------------- | ------------- |--------------|
+| 1  | WALKING  | Subject was walking during the test  |
+| 2  | WALKING_UPSTAIRS  | Subject was walking upstairs during the test  |
+| 3  | WALKING_DOWNSTAIRS  | Subject was walking downstairs during the test |
+| 4  | SITTING  | Subject was sitting during the test |
+| 5  | STANDING | Subject was standing during the test |
+| 6  | LAYING  | Subject was laying down during the test |
+
+## Step 4. Use descriptive names for the variables in the dataset.
+
+Use clear descriptive labels for the features in the dataset. 
+Use gsub function to replace the following:
+1) prefixes "t" and "f" with "time" and "freq" respectively
+2) "Acc" with "Accelerometer"
+3) "Gyro" with "Gyroscope"
+4) "Mag" with "Magnitude"
+5) "BodyBody" with "Body"
 
 ### Data Fields
 
@@ -61,15 +103,8 @@ The tidy data can be found in the tidyData.txt file in this repo. The data respe
 |freqBodyGyroscopeJerkMagnitude-std|
 
 
-## Activity Labels
+## Step 5. Generate a new *tidy* dataset from dataset (4) reporting the average of each variable for each activity and each subject
+The tidy data can be found in the tidyData.txt file in this repo. The data respesent average of each variable for each activity and each subject.
 
-| Activity Code  | Acitivity Label | Description |
-| ------------- | ------------- |--------------|
-| 1  | WALKING  | Subject was walking during the test  |
-| 2  | WALKING_UPSTAIRS  | Subject was walking upstairs during the test  |
-| 3  | WALKING_DOWNSTAIRS  | Subject was walking downstairs during the test |
-| 4  | SITTING  | Subject was sitting during the test |
-| 5  | STANDING | Subject was standing during the test |
-| 6  | LAYING  | Subject was laying down during the test |
 
 
