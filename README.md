@@ -5,6 +5,7 @@ This repository is used for the course project for the Johns Hopkins Getting and
 It includes:
   1) "run_analysis.R": an R script file with the code the performs the necessary analysis on the data for the assignment 
   2) "tidyData.txt": a txt file with all the resulting tidy data.
+  3) "CodeBook.md": a code book that explains the process of getting and cleaning the data
 
 ## Overview
 The aim of the project is the demonstration of the process of collecting and cleaning data which can then be used for downstream analysis. Specifically, the data used for this project are about wearable computing and were collected from the accelerometers using Samsung Galaxy smartphones. The raw data can be obtained here: [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
