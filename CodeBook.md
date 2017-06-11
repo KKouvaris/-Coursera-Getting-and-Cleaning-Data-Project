@@ -11,15 +11,15 @@ Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTA
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
 ## Tidy Data
-The tidy data can be found in the tidyData.txt file in this repo.
+The tidy data can be found in the tidyData.txt file in this repo. The data respesent average of each variable for each activity and each subject.
 
-## Data Fields
+### Data Fields
 
-### Supporting Idintefiers
+#### Supporting Idintefiers
 1) SubjectID
 2) Activity
 
-### Feature Names
+#### Feature Names
 |X|Y|Z|
 |-----|-------|-------|
 |  timeBodyAccelerometer-mean-X       |  timeBodyAccelerometer-mean-Y | timeBodyAccelerometer-mean-Z|
